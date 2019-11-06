@@ -18,6 +18,17 @@ jobs:
         with:
           name: BUILD_NUMBER
           path: BUILD_NUMBER
+  buildversion:
+    name: Build versioning
+    runs-on: ubuntu-latest
+    steps:
+      - uses: zyborg/gh-action-buildnum@v1
+        name: Generate build number
+        with:
+          gist_token: ${{ secrets.GIST_TOKEN }}
+          set_env: true
+      - name: print repo global build number
+        run: echo Build $BUILDNUM_FOR_GLOBAL
 
   # Unit tests
   test:
