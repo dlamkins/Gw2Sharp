@@ -1,0 +1,27 @@
+[
+  {
+    "id": 101,
+    "title": "Diamond Colonel",
+    "min_rank": 8945
+  },
+  {
+    "id": 102,
+    "title": "Diamond General",
+    "min_rank": 9195
+  },
+  {
+    "id": 103,
+    "title": "Diamond Veteran",
+    "min_rank": 9445
+  },
+  {
+    "id": 104,
+    "title": "Diamond Champion",
+    "min_rank": 9695
+  },
+  {
+    "id": 105,
+    "title": "Diamond Legend",
+    "min_rank": 9945
+  }
+]

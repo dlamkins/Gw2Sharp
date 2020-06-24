@@ -284,6 +284,9 @@
     <None Remove="TestFiles\Worlds\Worlds.bulk.json" />
     <None Remove="TestFiles\Worlds\Worlds.ids.json" />
     <None Remove="TestFiles\Worlds\Worlds.single.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.bulk.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.ids.json" />
+    <None Remove="TestFiles\Wvw\WvwRanks.single.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -558,6 +561,9 @@
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.bulk.json" />
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.ids.json" />
     <EmbeddedResource Include="TestFiles\Worlds\Worlds.single.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.bulk.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.ids.json" />
+    <EmbeddedResource Include="TestFiles\Wvw\WvwRanks.single.json" />
   </ItemGroup>
 
   <ItemGroup>
