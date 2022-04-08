@@ -8,7 +8,7 @@
     <title>Supported web API endpoints </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Supported web API endpoints ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -106,10 +106,16 @@
                             <a href="caching.html" title="Caching" class="">Caching</a>
                           </li>
                           <li class="">
-                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                            <a href="response-info.html" title="Response info" class="">Response info</a>
                           </li>
                           <li class="">
                             <a href="last-modified.html" title="Last-Modified" class="">Last-Modified</a>
+                          </li>
+                          <li class="">
+                            <a href="middleware.html" title="Middleware" class="">Middleware</a>
+                          </li>
+                          <li class="">
+                            <a href="proxy.html" title="Proxying the API" class="">Proxying the API</a>
                           </li>
                           <li class="">
                             <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
@@ -268,8 +274,13 @@
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountInventoryClient.html"><code>Gw2Client.WebApi.V2.Account.Inventory</code></a></td>
 </tr>
 <tr>
-<td> /v2/account/luck</td>
+<td> /v2/account/legendaryarmory</td>
 <td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountLegendaryArmoryClient.html"><code>Gw2Client.WebApi.V2.Account.LegendaryArmory</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/luck<br>➡️ /v2/account/progression</td>
+<td>🔑⚠️</td>
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountLuckClient.html"><code>Gw2Client.WebApi.V2.Account.Luck</code></a></td>
 </tr>
 <tr>
@@ -331,6 +342,11 @@
 <td> /v2/account/outfits</td>
 <td>🔑📆</td>
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountOutfitsClient.html"><code>Gw2Client.WebApi.V2.Account.Outfits</code></a></td>
+</tr>
+<tr>
+<td> /v2/account/progression</td>
+<td>🔑</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.AccountProgressionClient.html"><code>Gw2Client.WebApi.V2.Account.Progression</code></a></td>
 </tr>
 <tr>
 <td> /v2/account/pvp/heroes</td>
@@ -470,7 +486,7 @@
 <tr>
 <td> /v2/characters/<code>:id</code>/equipmenttabs</td>
 <td>🔑</td>
-<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsActiveClient.html"><code>Gw2Client.WebApi.V2.Characters[id].EquipmentTabs</code></a></td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdEquipmentTabsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].EquipmentTabs</code></a></td>
 </tr>
 <tr>
 <td> /v2/characters/<code>:id</code>/equipmenttabs/active</td>
@@ -501,16 +517,6 @@
 <td> /v2/characters/<code>:id</code>/sab</td>
 <td>🔑</td>
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSabClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Sab</code></a></td>
-</tr>
-<tr>
-<td> /v2/characters/<code>:id</code>/skills</td>
-<td>⚠️🔑📆</td>
-<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSkillsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Skills</code></a></td>
-</tr>
-<tr>
-<td> /v2/characters/<code>:id</code>/specializations</td>
-<td>⚠️🔑📆</td>
-<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.CharactersIdSpecializationsClient.html"><code>Gw2Client.WebApi.V2.Characters[id].Specializations</code></a></td>
 </tr>
 <tr>
 <td> /v2/characters/<code>:id</code>/training</td>
@@ -773,6 +779,11 @@
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.ItemstatsClient.html"><code>Gw2Client.WebApi.V2.Itemstats</code></a></td>
 </tr>
 <tr>
+<td> /v2/legendaryarmory</td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.LegendaryArmoryClient.html"><code>Gw2Client.WebApi.V2.LegendaryArmory</code></a></td>
+</tr>
+<tr>
 <td> /v2/legends</td>
 <td>📄📚📦</td>
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.LegendsClient.html"><code>Gw2Client.WebApi.V2.Legends</code></a></td>
@@ -889,7 +900,7 @@
 </tr>
 <tr>
 <td> /v2/pvp/seasons/<code>:id</code>/leaderboards/<code>:board</code>/<code>:region</code></td>
-<td>✔️</td>
+<td>📄</td>
 <td><a href="../api/Gw2Sharp.WebApi.V2.Clients.PvpSeasonsLeaderboardsRegionIdClient.html"><code>Gw2Client.WebApi.V2.Pvp.Seasons[id].Leaderboards[board][region]</code></a></td>
 </tr>
 <tr>
@@ -944,28 +955,28 @@
 </tr>
 <tr>
 <td> /v2/skins</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.SkinsClient.html"><code>Gw2Client.WebApi.V2.Skins</code></a></td>
 </tr>
 <tr>
 <td> /v2/specializations</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.SpecializationsClient.html"><code>Gw2Client.WebApi.V2.Specializations</code></a></td>
 </tr>
 <tr>
 <td> /v2/stories</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.StoriesClient.html"><code>Gw2Client.WebApi.V2.Stories</code></a></td>
 </tr>
 <tr>
 <td> /v2/stories/seasons</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.StoriesSeasonsClient.html"><code>Gw2Client.WebApi.V2.Stories.Seasons</code></a></td>
 </tr>
 <tr>
 <td> /v2/titles</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.TitlesClient.html"><code>Gw2Client.WebApi.V2.Titles</code></a></td>
 </tr>
 <tr>
 <td> /v2/tokeninfo</td>
@@ -974,8 +985,8 @@
 </tr>
 <tr>
 <td> /v2/traits</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.TraitsClient.html"><code>Gw2Client.WebApi.V2.Traits</code></a></td>
 </tr>
 <tr>
 <td> <del>/v2/vendors</del></td>
@@ -989,58 +1000,58 @@
 </tr>
 <tr>
 <td> /v2/worlds</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WorldsClient.html"><code>Gw2Client.WebApi.V2.Worlds</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/abilities</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwAbilitiesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Abilities</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/matches</td>
-<td>❌</td>
-<td></td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/matches/overview</td>
-<td>❌</td>
-<td></td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesOverviewClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Overview</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/matches/scores</td>
-<td>❌</td>
-<td></td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesScoresClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Scores</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/matches/stats</td>
-<td>❌</td>
-<td></td>
+<td>📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwMatchesStatsClient.html"><code>Gw2Client.WebApi.V2.Wvw.Matches.Stats</code></a></td>
 </tr>
 <tr>
-<td> /v2/wvw/matches/stats/<code>:id</code>/guilds/<code>:guild_id</code></td>
-<td>❌</td>
-<td></td>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/guilds/<code>:guild_id</code></del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
 </tr>
 <tr>
-<td> /v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kdr</td>
-<td>❌</td>
-<td></td>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kdr</del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
 </tr>
 <tr>
-<td> /v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kills</td>
-<td>❌</td>
-<td></td>
+<td> <del>/v2/wvw/matches/stats/<code>:id</code>/teams/<code>:team</code>/top/kills</del></td>
+<td>✖️</td>
+<td><em>Broken on the API as of 2020-12-22</em></td>
 </tr>
 <tr>
 <td> /v2/wvw/objectives</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwObjectivesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Objectives</code></a></td>
 </tr>
 <tr>
 <td> /v2/wvw/ranks</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwRanksClient.html"><code>Gw2Client.WebApi.V2.Wvw.Ranks</code></a></td>
 </tr>
 <tr>
 <td> <del>/v2/wvw/rewardtracks</del></td>
@@ -1049,8 +1060,8 @@
 </tr>
 <tr>
 <td> /v2/wvw/upgrades</td>
-<td>❌</td>
-<td></td>
+<td>🌐📄📚📦</td>
+<td><a href="../api/Gw2Sharp.WebApi.V2.Clients.WvwUpgradesClient.html"><code>Gw2Client.WebApi.V2.Wvw.Upgrades</code></a></td>
 </tr>
 </tbody>
 </table>
@@ -1061,10 +1072,14 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dlamkins/Gw2Sharp/blob/master/docs/guides/endpoints.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>

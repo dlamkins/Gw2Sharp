@@ -8,7 +8,7 @@
     <title>Checking the Last-Modified header </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Checking the Last-Modified header ">
-    <meta name="generator" content="docfx 2.43.3.0">
+    <meta name="generator" content="docfx 2.58.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -106,10 +106,16 @@
                             <a href="caching.html" title="Caching" class="">Caching</a>
                           </li>
                           <li class="">
-                            <a href="http-headers.html" title="HTTP headers" class="">HTTP headers</a>
+                            <a href="response-info.html" title="Response info" class="">Response info</a>
                           </li>
                           <li class="active">
                             <a href="last-modified.html" title="Last-Modified" class="active">Last-Modified</a>
+                          </li>
+                          <li class="">
+                            <a href="middleware.html" title="Middleware" class="">Middleware</a>
+                          </li>
+                          <li class="">
+                            <a href="proxy.html" title="Proxying the API" class="">Proxying the API</a>
                           </li>
                           <li class="">
                             <a href="subtokens.html" title="Subtokens" class="">Subtokens</a>
@@ -140,7 +146,7 @@
 <p>This header is used to check the last time the content you&#39;re accessing has been changed.
 It was added to the API on March 22nd, 2019.
 You can read up on it <a href="https://en-forum.guildwars2.com/discussion/72091/api-updates-march-22-2019">on the forums</a>.</p>
-<p>Gw2Sharp allows you to check this header through the same way as <a class="xref" href="http-headers.html">the other headers</a>.</p>
+<p>Gw2Sharp allows you to check this header through the same way as <a href="xref:Guides.HttpHeaders">the other headers</a>.</p>
 <p>An example:</p>
 <pre><code class="lang-cs">// Assuming you already have a client
 var character = await client.WebApi.V2.Characters[&quot;Your Character Name&quot;].GetAsync();
@@ -156,10 +162,14 @@ var lastModified = character.HttpResponseInfo.LastModified;
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/dlamkins/Gw2Sharp/blob/master/docs/guides/last-modified.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
-              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+                <h5>In This Article</h5>
+                <div></div>
               </nav>
             </div>
           </div>
